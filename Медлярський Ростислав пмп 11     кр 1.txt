@@ -1,0 +1,88 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+1)
+
+int result(int a, float b)
+{
+	long double dob = 1;
+	for (int i = 1; i <= a; i++)
+	{
+		dob = dob * sin(i*b);
+	}
+	return dob;
+}
+
+
+
+void Write(unsigned int v)
+{
+	cout << "result =" << v << endl;
+}
+
+int main()
+{
+	int n;
+	cout << "n =" << endl;
+	cin >> n;
+	float x;
+	cout << "x = " << endl;
+	cin >> x;
+	Write(result( n, x));
+	system("pause");
+
+}
+
+.....................
+2)
+int reverse(int n)
+{
+	int s;
+	while (n > 0)
+	{
+		s = n % 10;
+		n /= 10;
+		cout << s;
+	}
+}
+
+int main()
+{
+	int n;
+	cin >> n;
+	cout << reverse(n) << endl;
+	cout << endl;
+	system("pause");
+}
+..........................
+3)
+int recurs(int n)
+{
+	int x;
+	if (n ==0)
+	{
+		return 1;
+	}
+	if (n == 1)
+	{
+		return 2;
+	}
+	else
+	{
+		return 2*recurs(n - 1) + pow(recurs(n - 2), n - 2);
+
+	}
+
+}
+int main()
+{
+	int sum = 0;
+	for (int i = 1; i <= 20; i++)
+	{
+		sum = sum + recurs(i);
+	}
+	cout << "sum =" << sum << endl;
+	system("pause");
+   
+}
